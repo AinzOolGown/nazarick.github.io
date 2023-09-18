@@ -1,13 +1,13 @@
 h1 {
 	color: blue;
 	text-align: center;
-	font-size: 20 px;
+	font-size: 40px;
 }
 
 h2 {
 	color: white;
 	text-align: center;
-	font-size: 10 px;
+	font-size: 20px;
 }
 
 body {
@@ -15,4 +15,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.link p {
+	font-size: 10px;
+	text-align: right;
 }
