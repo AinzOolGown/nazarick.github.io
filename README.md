@@ -1,1 +1,0 @@
-# nazarick.github.io
