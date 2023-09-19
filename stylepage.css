@@ -38,6 +38,7 @@ tr:nth-child(even) {
 .link p {
 	font-size: 10px;
 	text-align: right;
+	float: right;
 }
 
 .link * {
