@@ -1,3 +1,8 @@
+* {
+	font-family: sans-serif;
+	color: white;
+}
+
 h1 {
 	color: blue;
 	text-align: center;
@@ -11,13 +16,42 @@ h2 {
 }
 
 body {
-  background-image: url('back.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+	background-image: url('back.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+table {
+    border-collapse: collapse;
+	align: left;
+}
+
+table td { 
+	padding: 10px 0; 
+	border-spacing: 15px;
+}
+tr:nth-child(even) {
+    background-color: #c4d8fd;   
 }
 
 .link p {
 	font-size: 10px;
 	text-align: right;
+}
+
+.link * {
+	float: right;
+}
+
+.listS1 ul {
+	text-align: left;
+	list-style-type: none;
+}
+
+.quote p {
+	font-size: 15px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;	
 }
