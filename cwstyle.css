@@ -1,0 +1,39 @@
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;	
+}
+main {
+	display : flex;
+	justify-content : center;
+	width : 70%;
+	margin-left : 15%;
+}
+aside {
+	flex-basis: 33%;
+}
+
+img {
+	width : 200px;
+	float : right;
+}
+
+.box {
+	flex-wrap : wrap;
+	border : 4px dashed red;
+	padding : 2em;
+	margin : 2em;
+}
+
+.left {
+	flex-basis: 33%;
+}
+
+.right {
+	flex-basis: 67%;
+}
+
+.clear {
+	clear : both;
+}
