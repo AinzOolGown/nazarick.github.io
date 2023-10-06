@@ -1,0 +1,111 @@
+main {
+	display : flex;
+	justify-content : center;
+}
+
+body {
+	background-image : url("background.png");
+	background-repeat : repeat;
+	overflow-x : hidden;
+}
+
+.banner img {
+	width : 100%;
+	margin-bottom : 10px;
+}
+
+h1{
+	font-size : 24pt;
+	font-weight : bold;
+	text-align : center;
+}
+
+.bigBox {
+	width : 80%;
+	border : 4px solid gray;
+}
+
+.subMain{
+	width : 70%;
+	float : left;
+	display : flex;
+	flex-wrap : wrap;
+	justify-content : center;
+}
+
+.rotBan {
+	height : 83px;
+	width : 100%;
+	background-image : url("rottenbackground.png");
+	background-repeat : repeat-x;
+	margin-top : 0%;
+	
+	display : flex;
+	align-items: flex-end;
+	color : white;
+}
+
+.rotRev {
+	width : 47%;
+	margin-top : 10px;
+	padding : 8px;
+	margin-right : 2px;
+	margin-left : 2px;
+	border : 2px solid gray;
+	font-weight : bold;
+	background-color : #E1D697;
+}
+
+.perInfo {
+	width : 50%;
+	margin-top : 5px;
+	margin-bottom : 3em;
+}
+
+.perInfo img {
+	float : left;
+	margin-right : 5px;
+}
+
+.rotRev img{
+	float : left;
+	margin-right : 5px;
+}
+
+.rotBan img{
+	height : 83px;
+}
+
+.subSec{
+	background-color : #A2B964;
+	width : 30%;
+	float : right;
+	font-weight : bold;
+}
+
+.subSec img{
+	width : 100%;
+	align : left;
+}
+
+.subSec ul{
+	font-weight : normal;
+	font-size : 10pt;
+	list-style-type : none;
+	list-style-position: outside;
+	margin-top : 5px;
+	margin-bottom : 10px;
+}
+
+.subBot{
+	background-color : #A2B964;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	width : 100%;
+	text-align : center;
+	clear : both;
+}
+
+.clear{
+	overflow : auto;
+}
