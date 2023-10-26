@@ -3,99 +3,27 @@
 <meta charset = "UTF-8">
 
 <title>Job Application Form</title>
-<style>
-body {
-	font-family: Arial, sans-serif;
-}
 
-h1 {
-	text-align: center;
-}
+<link rel = "stylesheet"  type = "text/css"  href="cw5CSS.css" />
 
-form {
-	width: 80%;
-	max-width: 600px;
-	margin: 0 auto;
-}
-
-label {
-	display: block;
-	margin-top: 10px;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="tel"],
-input[type="email"],
-textarea {
-	width: 100%;
-	padding: 5px;
-	margin-top: 5px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-}
-
-textarea {
-	height: 100px;
-}
-
-h2 {
-	margin-top: 15px;
-}
-
-input[type="range"] {
-	width: 100%;
-}
-
-output {
-	display: inline-block;
-	margin-left: 10px;
-}
-
-input[type="submit"] {
-	background-color: #007BFF;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	cursor: pointer;
-}
-
-input[type="submit"]:hover {
-	background-color: #0056b3;
-}
-.scrollng-menu.vertical {
-    overflow-y: scroll;
-    max-height: 200px; /* Adjust the maximum height as needed */
-}
-
-.scrollng-menu.vertical ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-</style>
 <script>
 window.addEventListener('contextmenu', function (e) {
 	e.preventDefault();
 });
 
-// Add an event listener to detect the "contextmenu" event (right-click)
 window.addEventListener('contextmenu', function (e) {
-	e.preventDefault(); // Prevent the default context menu
+	e.preventDefault();
 	console.log('Right-click context menu is blocked.');
 });
 
-// Add an event listener to detect the F12 key press (developer tools)
 window.addEventListener('keydown', function (e) {
 	if (e.key === 'F12') {
-		e.preventDefault(); // Prevent F12 from opening developer tools
+		e.preventDefault(); 
 		console.log('Opening developer tools is blocked.');
 	}
 });
 	
-	(() => { //IIFE arrow function
+	(() => {
 'use strict';
 
 const regexToMatchTLD = /\.[^.]+$/;
