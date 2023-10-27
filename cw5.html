@@ -6,49 +6,14 @@
 
 <link rel = "stylesheet"  type = "text/css"  href="cw5CSS.css" />
 
-<script>
-window.addEventListener('contextmenu', function (e) {
-	e.preventDefault();
-});
-
-window.addEventListener('contextmenu', function (e) {
-	e.preventDefault();
-	console.log('Right-click context menu is blocked.');
-});
-
-window.addEventListener('keydown', function (e) {
-	if (e.key === 'F12') {
-		e.preventDefault(); 
-		console.log('Opening developer tools is blocked.');
-	}
-});
-	
-	(() => {
-'use strict';
-
-const regexToMatchTLD = /\.[^.]+$/;
-const domain = location.hostname.replace(regexToMatchTLD, '');; 
-document.body.innerHTML =`
-	  <div style="direction: ltr; position: fixed; top: 0; z-index: 999999; display: block; width: 100%; height: 100%; background: red">
-		<p style="position: relative; top: 40%; display: block; font-size: 66px; font-weight: bold; color: #fff; margin: 0 auto; text-align: center">
-		  The website ${domain} successfully blocked !
-		</p>
-	  </div>
-`;
-})();
-		
-</script>
-
-
 </head>
 <body>
 <h1>Job Application Form</h1>
-<form action="submit_application.php" method="post">
+<form action="finished_application.php" method="post">
 <div>
 	<label for="position">Position Applied For:</label>
-	<input type="text" id="position" name="position" autofocus required>
+	<input type="text" id="position" name="position" required>
 </div>
-
 <div>
 	<label for="name">Name:</label>
 	<input type="text" id="name" name="name" required>
@@ -59,24 +24,21 @@ document.body.innerHTML =`
     <label for="male">Male</label>
 	<input type="radio" id="male" name="gender" value="male">
     
-    <label for="female">Female</label>
-	<input type="radio" id="female" name="gender" value="female">
+    <label for="fem">Female</label>
+	<input type="radio" id="fem" name="gender" value="female">
 </div>
 <div>
-	<label for="nationality">Nationality:</label>
-	<input type="text" id="nationality" name="nationality">
+	<label for="count">Nationality:</label>
+	<input type="text" id="count" name="count">
 </div>
-
 <div>
 	<label for="dob">Date of Birth:</label>
 	<input type="date" id="dob" name="dob">
 </div>
-
 <div>
-	<label for="address">Address:</label>
-	<textarea id="address" name="address"></textarea>
+	<label for="add">Address:</label>
+	<textarea id="add" name="add"></textarea>
 </div>
-
 <div>
 	<label for="phone">Telephone Number:</label>
 	<input type="tel" id="phone" name="phone" required>
@@ -86,38 +48,34 @@ document.body.innerHTML =`
 	<label for="email">Email:</label>
 	<input type="email" id="email" name="email" required>
 </div>
-
 <div>
 	<h2>Educational History and Qualifications:</h2>
-	<textarea id="education" name="education" rows="5"></textarea>
+	<textarea id="edu" name="edu" rows="5"></textarea>
 </div>
-
 <div>
 	<h2>Work Experience/Employment/Training:</h2>
-	<label for="yearsExperience">Years of Experience:</label>
-	<input type="range" id="yearsExperience" name="yearsExperience" min="0" max="10" step="1" value="0">
-	<output for="yearsExperience" id="yearsValue">0</output> years
+	<label for="yearsExp">Years of Experience:</label>
+	<input type="range" id="yearsExp" name="yearsExp" min="0" max="10" step="1" value="0">
+	<output for="yearsExp" id="yearsV">0</output> years
 </div>
-
 <div>
-	<label for="personalStatement">Personal Statement:</label>
-	<textarea id="personalStatement" name="personalStatement" rows="5"></textarea>
+	<label for="state">Personal Statement:</label>
+	<textarea id="state" name="state" rows="5"></textarea>
 </div>
-
 <div>
 	<h2>Referees:</h2>
 	<div>
 		<div>
-			<label for="referee2Name">Name:</label>
-			<input type="text" id="referee2Name" name="referee2Name">
+			<label for="refName">Name:</label>
+			<input type="text" id="refName" name="refName">
 		</div>
 		<div>
-			<label for="referee2Occupation">Occupation:</label>
-			<input type="text" id="referee2Occupation" name="referee2Occupation">
+			<label for="refOccu">Occupation:</label>
+			<input type="text" id="refOccu" name="refOccu">
 		</div>
 		<div>
-			<label for="referee1Relationship">Relationship:</label>
-			<select id="referee1Relationship" name="referee1Relationship">
+			<label for="refRel">Relationship:</label>
+			<select id="refRel" name="refRel">
 				<option value="friend">Friend</option>
 				<option value="family">Family</option>
 				<option value="colleague">Colleague</option>
@@ -127,28 +85,28 @@ document.body.innerHTML =`
 		</div>
 
 		<div>
-			<label for="referee2Address">Address:</label>
-			<input type="text" id="referee2Address" name="referee2Address">
+			<label for="refAdd">Address:</label>
+			<input type="text" id="refAdd" name="refAdd">
 		</div>
 		<div>
-			<label for="referee2Phone">Telephone:</label>
-			<input type="tel" id="referee2Phone" name="referee2Phone">
+			<label for="refPho">Telephone:</label>
+			<input type="tel" id="refPho" name="refPho">
 		</div>
 	</div>
 <div>
 	<label>Vegetarian:</label>
-	<input type="checkbox" id="vegetarianYes" name="vegetarian" value="yes">
-	<label for="vegetarianYes">Yes</label>
-	<input type="checkbox" id="vegetarianNo" name="vegetarian" value="no">
-	<label for="vegetarianNo">No</label>
+	<input type="checkbox" id="vegY" name="vegetarian" value="yes">
+	<label for="vegY">Yes</label>
+	<input type="checkbox" id="vegN" name="vegetarian" value="no">
+	<label for="vegN">No</label>
 </div>
-
 <div>
-	<label for="fruits">Select Fruits (Hold Ctrl/Command to select multiple):</label>
+	<label for="fruits">Select Fruits:</label>
 	<select id="fruits" name="fruits" multiple>
 		<option value="apple">Apple</option>
 		<option value="banana">Banana</option>
 		<option value="cherry">Cherry</option>
+		<option value="dragon">Dragon Fruit</option>
 		<option value="orange">Orange</option>
 		<option value="strawberry">Strawberry</option>
 	</select>
@@ -159,7 +117,5 @@ document.body.innerHTML =`
 		<input type="reset" value="Clear to Reset">
 		</div>
 </form>
-
-
 </body>
 </html>
