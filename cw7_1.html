@@ -32,17 +32,14 @@
 
     <script>
         function validateForm() {
-            // Reset previous error messages
             resetErrors();
 
-            // Fetch input values
             var id = document.getElementById("id").value.trim();
             var firstName = document.getElementById("firstName").value.trim();
             var lastName = document.getElementById("lastName").value.trim();
 
             var hasError = false;
 
-            // Check for missing values
             if (id === "") {
                 displayError("idError", "ID is required");
                 hasError = true;
@@ -58,7 +55,6 @@
                 hasError = true;
             }
 
-            // Display results or show alerts
             if (!hasError) {
                 displayResults(id, firstName, lastName);
             } else {
@@ -73,14 +69,12 @@
         }
 
         function resetErrors() {
-            // Reset all error messages
             document.getElementById("idError").innerHTML = "";
             document.getElementById("firstNameError").innerHTML = "";
             document.getElementById("lastNameError").innerHTML = "";
         }
 
         function displayResults(id, firstName, lastName) {
-            // Display results at the bottom of the form
             var resultElement = document.getElementById("result");
             resultElement.innerHTML = "ID: " + id + "<br>First Name: " + firstName + "<br>Last Name: " + lastName;
         }
