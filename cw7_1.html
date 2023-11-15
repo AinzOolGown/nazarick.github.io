@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .error-text {
+            color: red;
+        }
+    </style>
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <form id="myForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+        <div id="idError" class="error-text"></div>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <div id="firstNameError" class="error-text"></div>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        <div id="lastNameError" class="error-text"></div>
+
+        <button type="button" onclick="validateForm()">Add</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function validateForm() {
+            // Reset previous error messages
+            resetErrors();
+
+            // Fetch input values
+            var id = document.getElementById("id").value.trim();
+            var firstName = document.getElementById("firstName").value.trim();
+            var lastName = document.getElementById("lastName").value.trim();
+
+            var hasError = false;
+
+            // Check for missing values
+            if (id === "") {
+                displayError("idError", "ID is required");
+                hasError = true;
+            }
+
+            if (firstName === "") {
+                displayError("firstNameError", "First Name is required");
+                hasError = true;
+            }
+
+            if (lastName === "") {
+                displayError("lastNameError", "Last Name is required");
+                hasError = true;
+            }
+
+            // Display results or show alerts
+            if (!hasError) {
+                displayResults(id, firstName, lastName);
+            } else {
+                alert("Please fill in all required fields.");
+            }
+        }
+
+        function displayError(elementId, errorMessage) {
+            // Display red text above the input field with the error message
+            var errorElement = document.getElementById(elementId);
+            errorElement.innerHTML = errorMessage;
+        }
+
+        function resetErrors() {
+            // Reset all error messages
+            document.getElementById("idError").innerHTML = "";
+            document.getElementById("firstNameError").innerHTML = "";
+            document.getElementById("lastNameError").innerHTML = "";
+        }
+
+        function displayResults(id, firstName, lastName) {
+            // Display results at the bottom of the form
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "ID: " + id + "<br>First Name: " + firstName + "<br>Last Name: " + lastName;
+        }
+    </script>
+
+</body>
+</html>
