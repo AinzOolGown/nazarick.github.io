@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payroll Report</title>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+<h2>Payroll Report</h2>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Hours Worked</th>
+      <th>Pay</th>
+    </tr>
+  </thead>
+  <tbody id="payroll-body">
+    <!-- Employee rows will be added here -->
+  </tbody>
+</table>
+<p id="total-pay">Total Pay: $0</p>
+<script src="payroll.js"></script>
+</body>
+</html>
